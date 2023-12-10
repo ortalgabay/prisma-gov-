@@ -290,6 +290,9 @@ resource "aws_s3_bucket" "flowbucket" {
 
 resource "aws_s3_bucket" "flowbucket_log_bucket" {
   bucket = "flowbucket-log-bucket"
+  tags = {
+    yor_trace = "714bfa8d-d16f-4a45-9778-799f8fcf9f0f"
+  }
 }
 
 resource "aws_s3_bucket_logging" "flowbucket" {
